@@ -1,5 +1,5 @@
 [build]
-  publish = "pages"  # Set this to the directory containing your HTML files, if they're in a subfolder
+  publish = "main"  # Set this to the directory containing your HTML files, if they're in a subfolder
 
 [[redirects]]
   from = "/*"
