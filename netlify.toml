@@ -1,0 +1,7 @@
+[build]
+  publish = "pages"  # Set this to the directory containing your HTML files, if they're in a subfolder
+
+[[redirects]]
+  from = "/*"
+  to = "/home.html"
+  status = 200
