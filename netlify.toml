@@ -1,5 +1,5 @@
 [build]
-  publish = "public" # Change this if your build folder is named differently
+  publish = "Developer-Roadmaps" # Change this if your build folder is named differently
   command = "npm run build" # If you have a build command
 
 
