@@ -1,9 +1,0 @@
-[build]
-  publish = "Developer-Roadmaps" # Change this if your build folder is named differently
-  command = "npm run build" # If you have a build command
-
-
-[[redirects]]
-  from = "/*"
-  to = "/home.html"
-  status = 200
