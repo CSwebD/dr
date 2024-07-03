@@ -22,11 +22,11 @@ nav {
     align-items: center;
 }
 div.logo img {
-    height: 50px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
 }
 label.brand-name {
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     margin-left: 10px; /* Add space between logo and brand name */
 }
