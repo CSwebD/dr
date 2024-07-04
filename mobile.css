@@ -62,10 +62,13 @@ a.active, a:hover {
 }
 @media (max-width: 900px) {
     label.brand-name {
-        font-size: 30px;
+        font-size: 24px; /* Adjusted for smaller screens */
+    }
+    div.logo img {
+        height: 25px; /* Adjusted for smaller screens */
     }
     nav ul li a {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 @media (max-width: 1050px) {
