@@ -23,6 +23,7 @@ nav {
 }
 div.logo img {
     height: 30px; /* Adjust as needed */
+    width: auto;
 }
 label.brand-name {
     color: white;
@@ -66,6 +67,7 @@ a.active, a:hover {
     }
     div.logo img {
         height: 25px; /* Adjusted for smaller screens */
+        width: auto;
     }
     nav ul li a {
         font-size: 14px;
