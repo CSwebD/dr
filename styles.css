@@ -3,15 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    /* Logo*/
+    --bk-logo: #2e4053;
+    --S-logo: #ffffff;
+    --M-logo: #58a4b0;
+    /* Container sections*/
+    --bk-section: #e6e6e6;
+    --text-section: #2e4053;
+    /* Category title and page title*/
+    --category-title: #ac791c;
+    --page-title: #2e4053;
+    /* Panel-bar, Footer and theier text*/
+    --bk-footer: #11181f;
+    --bk-footer-sub: #000000;
+    --bk-pb: #11181f;
+    --text-pb-footer: #FFFFFF;
+    /* Background for Web page */
+    --bk-center: #e1e8eb;
+    --bk-edge: #afc9d6;
+    /* Categories colors*/
+    --Roles-pr: #1f3a93;
+    --Roles-sec: #1c2d63;
+    --Skills-pr: #008080;
+    --Skills-sec: #00cccc;
+    --AI-pr: #800080;
+    --AI-sec: #e6e6fa;
+    --Mk-pr: #008000;
+    --Mk-sec: #32cd32;
+}
 body {
-    /* background-color: #2C3E50; */
     margin: 0;
     padding: 0;
-    background-image: url(background.jpg);
+    background-image: linear-gradient(to left, var(--bk-edge), var(--bk-center), var(--bk-edge));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
 a{
     text-decoration: none;
     color: inherit;
@@ -39,86 +68,58 @@ p {
     text-align: center;
 }
 
-/* Topnav */
-#topnav .container{
-    background: #000;
-    max-width: 100%;
-    background-color: #111;
+nav {
+    background: var(--bk-pb);
+    height: 80px;
     width: 100%;
-    padding: 0px 20px 50px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
-.topnav .nav-home{
-    background: #111;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    position: relative;
-    float: left;
+.logo-brand {
+    display: flex;
+    align-items: center;
 }
-.topnav .nav-logo{
-    width: 50px;
-    height: 50px;
-    line-height: 65px;
+div.logo img {
+    height: 30px; /* Adjust as needed */
+    width: auto;
 }
-.topnav .nav-options{
-    /* background-color: #686e4e; */
+label.brand-name {
     color: white;
-    float: left;
-    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 10px; /* Add space between logo and brand name */
 }
-
-.nav-options ul{
-    list-style: none;
+nav ul {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
 }
-.nav-options ul li{
-    width: 180px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    position: relative;
-    float: left;
-    font-size: 14px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-    background: #111;
-    width: 170px;
-    /* border: 1px solid #fff; */
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    float: left;
-    color: #e3e4fd;
-    font-size: 14px;
-    position: relative;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
 }
-.nav-options ul li:hover {
-    background: rgb(20, 35, 58);
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
 }
-.nav-options ul ul{
+a.active, a:hover {
+    background: #2c2b2b;
+    transition: .5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
     display: none;
+    cursor: pointer;
 }
-.nav-options ul li:hover > ul {
-    display: block;
-}
-.nav-options ul ul ul{
-    margin-left: 170px;
-    top: 0;
-    position: absolute;
-}
-.topnav .nav-search{
-    background: #111;
-    color: white;
-    width: 400px;
-    height: 50px;
-    text-align: right;
-    position: relative;
-    float: right;
-}
-.topnav .nav-search .nav-text{
-    line-height: 50px;
+#check {
+    display: none;
 }
 
 /* Head */
@@ -140,7 +141,7 @@ p {
     padding: 40px 0;
 }
 #head .head h2{
-    color: #FFD700;
+    color: var(--category-title);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2rem;
 }
@@ -177,11 +178,11 @@ p {
     padding-bottom: 100px;
 }
 .top-btn button {
-    background-color: rgb(20, 35, 58); /* Green background */
-    border: 1px solid rgb(35, 50, 71); /* Green border */
-    color: rgb(230, 227, 227); /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
+    background-color: rgb(20, 35, 58); 
+    border: 1px solid rgb(35, 50, 71); 
+    color: rgb(230, 227, 227); 
+    padding: 10px 24px; 
+    cursor: pointer; 
     float: left; /* Float the buttons side by side */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.4rem;
@@ -231,7 +232,7 @@ p {
     grid-template-columns: auto auto auto;
     padding: 10px;
     gap:20px;
-    background-color: rgb(20, 35, 58);
+    background-color: var(--bk-section);
 }
 #description .description{
     flex-direction: column;
@@ -241,7 +242,7 @@ p {
     padding: 60px 0;
 }
 #description .description .section-title{
-    color: rgb(230, 227, 227);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.4rem;
 }
@@ -251,7 +252,7 @@ p {
     margin: 0 auto;
 }
 #description .description-top .paragraph{
-    color: rgb(180, 177, 177);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1rem;
 }
@@ -265,7 +266,7 @@ p {
     grid-template-columns: auto auto auto;
     padding: 10px;
     gap: 20px;
-    background-color: rgb(35, 50, 71);
+    background-color: var(--bk-section);
 }
 #new-courses .new-courses{
     flex-direction: column;
@@ -275,7 +276,7 @@ p {
     padding: 60px 0;
 }
 #new-courses .new-courses .section-title{
-    color: rgb(230, 227, 227);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.4rem;
 }
@@ -285,7 +286,7 @@ p {
     margin: 0 auto;
 }
 #new-courses .new-courses-top .paragraph{
-    color: rgb(180, 177, 177);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: justify;
     font-size: 1rem;
@@ -302,7 +303,7 @@ p {
     grid-template-columns: auto auto auto;
     padding: 10px;
     gap:20px;
-    background-color: rgb(20, 35, 58);
+    background-color: var(--bk-section);
 }
 #top10 .top10{
     flex-direction: column;
@@ -312,7 +313,7 @@ p {
     padding: 60px 0;
 }
 #top10 .top10 .section-title{
-    color: rgb(230, 227, 227);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.4rem;
 }
@@ -322,7 +323,7 @@ p {
     margin: 0 auto;
 }
 #top10 .top10-top .paragraph{
-    color: rgb(180, 177, 177);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1rem;
 }
@@ -351,7 +352,7 @@ p {
     margin: 0 auto;
 }
 #why-rd .why-rd-top .paragraph{
-    color: rgb(180, 177, 177);
+    color: var(--text-section);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: justify;
 
@@ -360,7 +361,7 @@ p {
 
 /* Footer */
 footer{
-    background-color: #111;
+    background-color: var(--bk-footer);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -381,7 +382,7 @@ footer{
 .socialIcons a{
     text-decoration: none;
     padding: 10px;
-    background-color: white;
+    background-color: var(--text-pb-footer);
     margin: 10px;
     border-radius: 50%;
 }
@@ -396,7 +397,7 @@ footer{
     transition: 0.5s;
 }
 .socialIcons a:hover i{
-    color: white;
+    color: var(--text-pb-footer);
     transition: 0.5s;
 }
 .footerNav{
@@ -408,7 +409,7 @@ footer{
     list-style-type: none;
 }
 .footerNav ul li a{
-    color: white;
+    color: var(--text-pb-footer);
     margin: 20px;
     text-decoration: none;
     font-size: 1.3em;
@@ -419,12 +420,12 @@ footer{
     opacity: 1;
 }
 .footerBottom{
-    background-color: #000;
+    background-color: var(--bk-footer-sub);
     padding: 20px;
     text-align: center;
 }
 .footerBottom p{
-    color: white;
+    color: var(--text-pb-footer);
 }
 .designer{
     opacity: 0.7;
