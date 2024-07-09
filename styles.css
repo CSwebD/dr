@@ -14,7 +14,7 @@
     /* Category title and page title*/
     --category-title: #ac791c;
     --page-title: #2e4053;
-    /* Panel-bar, Footer and theier text*/
+    /* Panel-bar, Footer and their text*/
     --bk-footer: #11181f;
     --bk-footer-sub: #000000;
     --bk-pb: #11181f;
@@ -443,4 +443,80 @@ footer{
         text-align: center;
         margin: 10px;
     }
+}
+
+/* Certificate Section */
+#certificate-section {
+    background-color: #e1e8eb; /* Background color for the certificate section */
+    padding: 20px;
+    margin: 20px 0; /* Adjust margin as needed */
+}
+
+.certificate.container {
+    background-color: #ffffff; /* Background color for the certificate container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.certificate-top {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.certificate-top .section-title {
+    color: #2e4053; /* Text color for section title */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+form label {
+    color: #2e4053; /* Label text color */
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+form button {
+    background-color: #58a4b0; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+form button:hover {
+    background-color: #2e8aac; /* Hover background color */
+}
+
+.minimized-paragraph {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.paragraph-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.paragraph-content.active {
+    display: block;
 }
