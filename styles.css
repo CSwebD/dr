@@ -88,10 +88,14 @@ div.logo img {
 label.brand-name {
     color: white;
     font-size: 30px;
-    font-weight: bold;
     margin-left: 10px; /* Add space between logo and brand name */
+    font-family: "Roboto", sans-serif;
+    font-weight: 00;
+    font-style: thin;
 }
 nav ul {
+    font-family: "Roboto", sans-serif;
+
     display: flex;
     align-items: center;
     margin-right: 20px;
