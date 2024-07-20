@@ -23,14 +23,12 @@
     --bk-center: #e1e8eb;
     --bk-edge: #afc9d6;
     /* Categories colors*/
-    --Roles-pr: #1f3a93;
-    --Roles-sec: #1c2d63;
-    --Skills-pr: #008080;
-    --Skills-sec: #00cccc;
-    --AI-pr: #800080;
-    --AI-sec: #e6e6fa;
-    --Mk-pr: #008000;
-    --Mk-sec: #32cd32;
+    --Roles-pr: #142A4F;
+    --Roles-sec: #305DA8;
+    --Skills-pr: #C75321;
+    --Skills-sec: #D37829;
+    --AI-pr: #E4AB34;
+    --AI-sec: #F5DD3F;
 }
 ##body {
     margin: 0;
@@ -95,7 +93,6 @@ label.brand-name {
 }
 nav ul {
     font-family: "Roboto", sans-serif;
-
     display: flex;
     align-items: center;
     margin-right: 20px;
@@ -158,8 +155,8 @@ a.active, a:hover {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #head .head img{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 /* Sections */

@@ -1,16 +1,37 @@
 :root {
-    /* Logo and mixed colors */
+    /* Logo*/
     --bk-logo: #2e4053;
     --S-logo: #ffffff;
     --M-logo: #58a4b0;
+    /* Container sections*/
+    --bk-section: #e6e6e6;
+    --text-section: #2e4053;
+    /* Category title and page title*/
+    --category-title: #ac791c;
+    --page-title: #2e4053;
+    /* Panel-bar, Footer and their text*/
+    --bk-footer: #11181f;
+    --bk-footer-sub: #000000;
+    --bk-pb: #11181f;
+    --text-pb-footer: #FFFFFF;
+    /* Background for Web page */
+    --bk-center: #e1e8eb;
+    --bk-edge: #afc9d6;
+    /* Categories colors*/
+    --Roles-pr: #e46974;
+    --Roles-sec: #305DA8;
+    --Skills-pr: #00a9ef;
+    --Skills-sec: #D37829;
+    --AI-pr: #f7a200;
+    --AI-sec: #F5DD3F;
 
     /* Button gradients */
-    --Roles-pr: linear-gradient(to bottom right, #3498db, #2980b9); /* Blue gradient */
-    --Skills-pr: linear-gradient(to bottom right, #27ae60, #2ecc71); /* Green gradient */
-    --AI-pr: linear-gradient(to bottom right, #9b59b6, #8e44ad); /* Purple gradient */
+    --Roles-pr: linear-gradient(to bottom right, #E46974, #E46974); /* Blue gradient */
+    --Skills-pr: linear-gradient(to bottom right, #00A9EF, #00A9EF); /* Green gradient */
+    --AI-pr: linear-gradient(to bottom right, #F7A200, #F7A200); /* Purple gradient */
 
     /* Button text color and font */
-    --button-text-color: #ffffff;
+    --button-text-color: #000;
     --button-font-size: 24px;
     --button-font-family: 'Arial', sans-serif; /* Change the font family as needed */
     --button-font-weight: bold; /* Make text bold */
