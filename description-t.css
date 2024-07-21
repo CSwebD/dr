@@ -1,0 +1,31 @@
+#description-t {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+#description-t .container {
+    max-width: 1200px;
+    background-color: #f8f8f8; /* Light background color for contrast */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center align text */
+    margin: 0 auto; /* Center the container */
+}
+
+#description-t .content {
+    max-width: 800px; /* Maximum width for the content */
+    margin: 0 auto; /* Center the content */
+}
+
+#description-t h1 {
+    font-size: 2.5rem; /* Large font size for the heading */
+    color: #2d642b; /* Color matching the style */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
+#description-t p {
+    font-size: 1.2rem; /* Slightly larger font size for readability */
+    color: #333; /* Dark color for text */
+    margin-bottom: 30px; /* Spacing below the paragraph */
+}

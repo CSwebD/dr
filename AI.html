@@ -5,7 +5,9 @@
     <title>SM - AI</title>
     <link rel="icon" href="logo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="squares.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" type="text/css" href="course-options.css">
     <link rel="stylesheet" type="text/css" href="style-sub.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,26 +22,125 @@
 
     <section id="head">
         <div class="head container">
-            <h2 class="title-page">AI based Roadmaps</h2>
-            <img src="logo.jpg">
+            <h2 class="title-page">AI Based Roadmaps</h2>
+            <img src="logo4.jpg">
         </div>
     </section>
 
-    <section id="sections">
+    <!--Course options-->
+    <section id="box-section">
+        <div class="box-container">
+            <a href="Introduction_to_AI.html" class="box">
+                <h3 class="course-name">Introduction to AI</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Explore the history, fundamentals, and diverse applications of Artificial Intelligence across various industries.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <a href="maths_and_statistics_for_ai.html" class="box">
+                <h3 class="course-name">Maths and Statistics for AI</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Master essential mathematical and statistical concepts crucial for understanding and developing AI algorithms.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <a href="machine_learning.html" class="box">
+                <h3 class="course-name">Machine Learning</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Learn the principles, techniques, and evaluation metrics of supervised and unsupervised machine learning models.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <a href="machine_learning.html" class="box">
+                <h3 class="course-name">Machine Learning</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Dive into neural networks, architectures, and advanced techniques for creating powerful AI models.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <a href="natural_language_processing.html" class="box">
+                <h3 class="course-name">Natural Language Processing</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Understand and implement NLP techniques for text preprocessing, sentiment analysis, and language modeling.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <a href="ai_ethics.html" class="box">
+                <h3 class="course-name">AI Ethics</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Examine the ethical considerations, bias, transparency, and societal implications of AI technologies.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <a href="practics_and_projects.html" class="box">
+                <h3 class="course-name">Practical Applications and Capstone Project</h3>
+                <p class="course-category"><b>Category:</b> AI</p>
+                <p class="course-description"><b>Description: </b><i>
+                    Apply AI concepts in practical projects, culminating in a comprehensive capstone project with real-world applications.
+                </i></p>
+                <p class="course-duration"><b>Duration:</b> 10 hours</p>
+            </a>
+            <!-- Add more boxes as needed -->
+        </div>
+    </section>
+    
+    <!-- Search course -->
+    <section id="sections1">
         <div class="sections container">
-            <div class="top-btn" style="width:70%">
-                <a href="Introduction_to_AI.html"><button style="width:100%">AI based Roadmaps</button></a>
-            </div>
-            <div class="bottom-btn" style="width:70%">
-                <div class="bb" style="width:100%">
-                    <a href="Introduction_to_AI.html"class="button">Introduction to AI</a>
-                    <a href="maths_and_statistics_for_ai.html"class="button">Maths and Statistics for AI</a>
-                    <a href="machine_learning.html"class="button">Machine Learning</a>
-                    <a href="deep_learning.html"class="button">Deep Learning</a>
-                    <a href="natural_language_processing.html"class="button">Natural Language Processing NLP</a>
-                    <a href="ai_ethics.html"class="button">AI Ethics</a>
-                    <a href="practics_and_projects.html"class="button">Practics and Projects</a>
-                    <a href="resources.html"class="button">Resources</a>
+            <div class="search-container">
+                <h2>Search for a Course or Roadmap</h2>
+                <form class="search-form" id="search-form">
+                    <select name="search-type" id="search-type">
+                        <option value="">Select Search Type...</option>
+                        <option value="roadmap">Roadmap</option>
+                        <option value="course">Course Title</option>
+                    </select>
+    
+                    <div id="roadmap-options" class="search-options" style="display: none;">
+                        <select name="roadmap-category" id="roadmap-category">
+                            <option value="">Select Roadmap Category...</option>
+                            <option value="roles">Roles</option>
+                            <option value="skills">Skills</option>
+                            <option value="ai">AI</option>
+                        </select>
+                    </div>
+    
+                    <div id="course-options" class="search-options" style="display: none;">
+                        <select name="course-title" id="course-title">
+                            <option value="">Select Course Title...</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>                            
+                            <option value="Vue">Vue</option>
+                            <option value="Docker">Docker</option>
+                            <option value="Angular">Angular</option>
+                            <option value="Frontend">Frontend</option>                            
+                            <option value="Backend">Backend</option>
+                            <option value="DevOps">DevOps</option>
+                            <option value="FullStuck">FullStuck</option>                            
+                            <option value="Software Architect">Software Architect</option>
+                            <option value="Introduction to AI">Introduction to AI</option>                            
+                            <option value="Maths and Statisctics for AI">Maths and Statisctics for AI</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Deep learning">Deep learning</option>
+                            <option value="Natural Language Processing">Natural Language Processing</option>                            
+                            <option value="AI Ethics">AI Ethics</option>
+                            <option value="AI Practics and Projects">AI Practics and Projects</option>
+                            <option value="AI Resources">AI Resources</option>
+                        </select>
+                    </div>
+    
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="browse-links">
+                    <a href="all-courses.html">Browse all courses</a>
                 </div>
             </div>
         </div>
@@ -50,7 +151,7 @@
             <div class="video-course-top">
                 <h1 class="section-title">Overview of different IT careers</h1>
                 <p class="paragraph"><br>
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/ad79nYk2keg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="tutorial-video" width="1200" height="675" src="https://www.youtube.com/embed/ad79nYk2keg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </p>
             </div>
         </div>
@@ -103,18 +204,6 @@
                     <a href="top_10_questions.html#question3">- What are the differences between compiled and
                         interpreted programming
                         languages?<br></a>
-                    <a href="top_10_questions.html#question4">- What is an algorithm and why is it important in
-                        programming?<br></a>
-                    <a href="top_10_questions.html#question5"></a>- What is the difference between a variable and a
-                    constant in programming?<br>
-                    <a href="top_10_questions.html#question6">- How do I debug my code?<br></a>
-                    <a href="top_10_questions.html#question7">- What is object-oriented programming?<br></a>
-                    <a href="top_10_questions.html#question8">- How do I choose the right data structure for my
-                        program?<br></a>
-                    <a href="top_10_questions.html#question9">- What are APIs and how do they work?<br></a>
-                    <a href="top_10_questions.html#question10">- What is version control and why is it important in
-                        programming?<br></a>
-                    <a href="top_10_questions.html">... other questions.</a>
                 </p>
             </div>
         </div>
@@ -124,6 +213,7 @@
     <div id="footer-placeholder"></div>
     <script src="footer.js"></script>
     <script src="analytics.js"></script>
+    <script src="course.js"></script>
 </body>
 
 </html>

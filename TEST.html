@@ -1,147 +1,208 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SM - AI</title>
-    <link rel="icon" href="logo.jpg" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="quiz.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css">
-    <link rel="stylesheet" type="text/css" href="style-sub.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Skill Maps</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/yourcode.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2d642b;
+            --secondary-color: #d32f2f;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+            --input-background: #fff;
+            --input-border: #ccc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        #sections1 {
+            background-color: var(--secondary-color);
+            padding: 2rem 0;
+        }
+
+        .search-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .search-container h2 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .search-form select,
+        .search-form input,
+        .search-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .search-form select,
+        .search-form input {
+            flex-grow: 1;
+            background-color: var(--input-background);
+        }
+
+        .search-form button {
+            background-color: var(--primary-color);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-form button:hover {
+            background-color: #1e4e1d;
+        }
+
+        .browse-links {
+            text-align: right;
+        }
+
+        .browse-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .paragraph {
+            text-align: justify;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .search-form {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QKV65MZZZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-5QKV65MZZZ');
-</script>
-
 <body>
-    <!-- Placeholder for the panel bar -->
-    <div id="panel-bar-placeholder"></div>
-    <script src="panel-bar.js"></script> 
-
-    <section id="head">
-        <div class="head container">
-            <h2 class="title-page">Introduction to AI</h2>
+    <header>
+        <div class="container">
+            <img src="logo2.jpg" alt="Skill Maps Logo">
         </div>
-    </section>
+    </header>
 
-    <section id="video-course">
-        <div class="video-course container">
-            <div class="video-course-top">
-                <h1 class="section-title">Quick intro into Angular:</h1>
-                <p class="paragraph">
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/y14f_VFsZIA?si=31UPLzgRLAJR6MoH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    Source: [Youtube/AltexSoft]
-                </p>
+    <section id="sections1">
+        <div class="container">
+            <div class="search-container">
+                <h2>Search for a Course or Roadmap</h2>
+                <form class="search-form" id="search-form">
+                    <select name="search-type" id="search-type">
+                        <option value="">Select Search Type...</option>
+                        <option value="roadmap">Roadmap</option>
+                        <option value="course">Course Title</option>
+                    </select>
+                    <input type="text" placeholder="Enter your search...">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="browse-links">
+                    <a href="#">Browse all courses</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="text-course">
-        <div class="text-course container">
-            <div class="text-course-top">
-                <h1 class="section-title">Instructions:</h1>
-                <p class="paragraph">
-                    Welcome to Angular - Full Course!
-                    <br>For this course, you will need to write your code in Visual Studio Code (needs to be installed on desktop), or other online tools like Programiz.
-                    <br>1. The first step is to watch the video "Angular - Full Course."
-                    <br>2. Next, there are 3 projects. Watch how to build them, then you will be guided to modify and test them so you can add them to your portfolio.
-                    <br>3. At the end, you will check your knowledge about Angular by taking an exam. If you pass it, you will be able to redeem your certificate.
-                    <br>Good luck!
-                </p>                
-
-                <!-- Minimized paragraphs -->
-                <p class="minimized-paragraph" onclick="toggleParagraph(1)">Angular - Full Course (video)</p>
-                <div id="paragraph-1" class="paragraph-content hide">
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/3qBXWUpoPHo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    Source: [Youtube/freeCodeCamp.org]
-                    <br>Watch this video and make some notes. Once done, go to the next stage, your first project in Python.
-                </div>                
-
-                <p class="minimized-paragraph" onclick="toggleParagraph(2)">Project 1: Tic-Tac-Toe PWA</p>
-                <div id="paragraph-2" class="paragraph-content hide">
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/G0bBLvWXBvc?si=_jNovMj484r0k7ht" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    Source: [Youtube/Fireship]
-                    <br>Exercise:
-                    <br>1. Follow the video and build this code. You can use Visual Studio Code (it's free). Test your code;
-                    <br>2. Try to build something similar with your own code. Test it, if it works, upload it to your GitHub account.
-                    <br>3. Go to the next stage: the second project in Angular.
-                </div>
-
-                <p class="minimized-paragraph" onclick="toggleParagraph(3)">Project 2: To Do List</p>
-                <div id="paragraph-3" class="paragraph-content hide">
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/pLKVa1l7KMs?si=cqCCTmoBi4tmP8tA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    Source: [Youtube/Code Logic]
-                    <br>Exercise:
-                    <br>1. Follow the video and build this code. Test your code;
-                    <br>2. Try to build something similar with your own code. Test it, if it works, upload it to your GitHub account.
-                    <br>3. Go to the next stage: the third project in Angular.
-                </div>
-
-                <p class="minimized-paragraph" onclick="toggleParagraph(4)">Project 3: Employee Payroll, Salary App</p>
-                <div id="paragraph-4" class="paragraph-content hide">
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/sWOXETusJNw?si=CscYCjLyVvpwN9qb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    Source: [Youtube/Amit Shukla]
-                    <br>Exercise:
-                    <br>1. Follow the video and build this code. Test your code;
-                    <br>2. Try to build something similar with your own code. Test it, if it works, upload it to your GitHub account.
-                    <br>3. The next stage is an exam. You have 10 questions, with a total time of 10 minutes. To pass, you need to get 8 out of 10. You can retake it. Once you pass, you will have 1 minute to redeem your certificate by entering your full name correctly!
-                </div>
-
-                <p class="minimized-paragraph" onclick="toggleParagraph(5)">Exam (Redeem Certificate)</p>
-                <div id="paragraph-5" class="paragraph-content">
-                    <div class="quiz-container">
-                        <div id="quiz">
-                            <div id="question-count"></div>
-                            <div id="question"></div>
-                            <div class="choices">
-                                <button class="choice" onclick="selectAnswer(0)"></button>
-                                <button class="choice" onclick="selectAnswer(1)"></button>
-                                <button class="choice" onclick="selectAnswer(2)"></button>
-                                <button class="choice" onclick="selectAnswer(3)"></button>
-                            </div>
-                            <button id="prev-btn" class="hide" onclick="prevQuestion()">Previous</button>
-                            <button id="next-btn" onclick="nextQuestion()">Next</button>
-                            <div id="timer"></div>
-                        </div>
-                        <div id="result" class="hide">
-                            <h2>Results</h2>
-                            <p id="result-message"></p>
-                            <p>Your score: <span id="score"></span></p>
-                            <div id="result-details"></div>
-                            <button onclick="restartQuiz()">Restart Quiz</button>
-                            <div id="redeem-certificate" class="hide">
-                                <input type="text" id="name" placeholder="Enter your name">
-                                <button onclick="generateCertificate()">Generate Certificate</button>
-                                <div id="redemption-timer" class="hide"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="paragraph">
-                    <h1 class="section-title" style="margin-top: 20px;">Summary</h1>
-                    <br>Now you can add your own projects to your GitHub account and post your certificate on LinkedIn. You can also explore and learn other programming languages using the <a href="Skill_Based_Roadmaps.html">Skill-Based Roadmaps</a> or choose a career path from the <a href="Role_based_Roadmaps.html">Role-Based Roadmaps</a>.
-                    <br>
-                </p>
-            </div>
+    <section id="description">
+        <div class="container">
+            <h2 class="section-title">What is skill-maps.com?</h2>
+            <p class="paragraph">An effective option to learn how to create computer programmes, web apps, and software is to take an online programming language course. The building blocks of any software development are programming languages, and there are several to pick from, each with unique advantages and disadvantages. These programmes offer both more in-depth instruction for seasoned developers as well as assistance to newcomers learning the fundamentals of programming. Online courses allow students to study at their own speed, from the convenience of their homes, and sometimes at a fraction of the price of traditional classroom-based courses. An online programming language course is a great place to start if you want to acquire a new skill for a career shift or just want to learn more about the fascinating world of programming.</p>
         </div>
     </section>
 
-    <!-- Placeholder for the footer -->
-    <div id="footer-placeholder"></div>
-    <script src="footer.js"></script>
-    <script src="angular-quiz.js"></script>
-    <script src="angular-certificate.js"></script>
+    <section id="new-courses">
+        <div class="container">
+            <h2 class="section-title">New courses</h2>
+            <p class="paragraph">
+                <a href="Angular.html"># Angular Everything that is there to learn about Angular and the ecosystem_</a><br>
+                <a href="DevOps.html"># Step by step guide for DevOps, SRE or any other Operations Role_</a><br>
+                <a href="JavaScript.html"># Step by step guide to learn JavaScript_</a><br>
+                <a href="Backend.html"># Step by step guide to becoming a modern Backend Developer_</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="top10">
+        <div class="container">
+            <h2 class="section-title">Top 10 Questions</h2>
+            <p class="paragraph">
+                <a href="top_10_questions.html#question1">- What is programming?</a><br>
+                <a href="top_10_questions.html#question2">- What programming languages should I learn?</a><br>
+                <a href="top_10_questions.html#question3">- What are the differences between compiled and interpreted programming languages?</a><br>
+                <a href="top_10_questions.html#question4">- What is an algorithm and why is it important in programming?</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Skill Maps. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

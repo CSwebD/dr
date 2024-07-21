@@ -6,6 +6,8 @@
     <link rel="icon" href="logo.jpg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="mobile.css">
+    <link rel="stylesheet" type="text/css" href="squares.css">
+    <link rel="stylesheet" type="text/css" href="course-options.css">
     <link rel="stylesheet" type="text/css" href="style-sub.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,34 +22,122 @@
 
     <section id="head">
         <div class="head container">
-            <h2 class="title-page">Role based Roadmaps</h2>
-            <img src="logo.jpg">
+            <h2 class="title-page">Role Based Roadmaps</h2>
+            <img src="logo4.jpg">
         </div>
     </section>
 
-    <section id="sections">
-        <div class="sections container">
-            <div class="top-btn" style="width:70%">
-                <a href="Role_based_Roadmaps.html"><button style="width:100%">Role based Roadmaps</button></a>
+        <!--Course options-->
+        <section id="box-section">
+            <div class="box-container">
+                <a href="Frontend.html" class="box">
+                    <h3 class="course-name">Frontend</h3>
+                    <p class="course-category"><b>Category:</b> Role Based Roadmaps</p>
+                    <p class="course-description"><b>Description: </b><i>
+                        Learn to design and implement visually appealing and user-friendly web interfaces using HTML, CSS, and JavaScript.
+                    </i></p>
+                    <p class="course-duration"><b>Duration:</b> 10 hours</p>
+                </a>
+                <a href="Backend.html" class="box">
+                    <h3 class="course-name">Backend</h3>
+                    <p class="course-category"><b>Category:</b> Role Based Roadmaps</p>
+                    <p class="course-description"><b>Description: </b><i>
+                        Master server-side development, focusing on databases, APIs, and server logic to build robust web applications.
+                    </i></p>
+                    <p class="course-duration"><b>Duration:</b> 10 hours</p>
+                </a>
+                <a href="DevOps.html" class="box">
+                    <h3 class="course-name">DevOps</h3>
+                    <p class="course-category"><b>Category:</b> Role Based Roadmaps</p>
+                    <p class="course-description"><b>Description: </b><i>
+                        Explore DevOps practices, including continuous integration, deployment, and infrastructure automation for streamlined development processes.
+                    </i></p>
+                    <p class="course-duration"><b>Duration:</b> 10 hours</p>
+                </a>
+                <a href="FullStack.html" class="box">
+                    <h3 class="course-name">FullStack</h3>
+                    <p class="course-category"><b>Category:</b> Role Based Roadmaps</p>
+                    <p class="course-description"><b>Description: </b><i>
+                        Gain expertise in both frontend and backend development to build complete, end-to-end web applications.
+                    </i></p>
+                    <p class="course-duration"><b>Duration:</b> 10 hours</p>
+                </a>
+                <a href="Software_Architect.html" class="box">
+                    <h3 class="course-name">Software Architect</h3>
+                    <p class="course-category"><b>Category:</b> Role Based Roadmaps</p>
+                    <p class="course-description"><b>Description: </b><i>
+                        Learn to design high-level software architecture, ensuring scalability, performance, and maintainability of complex systems.
+                    </i></p>
+                    <p class="course-duration"><b>Duration:</b> 10 hours</p>
+                </a>
+
+                <!-- Add more boxes as needed -->
             </div>
-            <div class="bottom-btn" style="width:70%">
-                <div class="bb" style="width:100%">
-                    <a href="Frontend.html"class="button">Frontend</a>
-                    <a href="Backend.html"class="button">Backend</a>
-                    <a href="DevOps.html"class="button">DevOps</a>
-                    <a href="FullStack.html"class="button">Full Stack</a>
-                    <a href="Software_Architect.html"class="button">Software Architect</a>
+        </section>
+
+    <!-- Search course -->
+    <section id="sections1">
+        <div class="sections container">
+            <div class="search-container">
+                <h2>Search for a Course or Roadmap</h2>
+                <form class="search-form" id="search-form">
+                    <select name="search-type" id="search-type">
+                        <option value="">Select Search Type...</option>
+                        <option value="roadmap">Roadmap</option>
+                        <option value="course">Course Title</option>
+                    </select>
+    
+                    <div id="roadmap-options" class="search-options" style="display: none;">
+                        <select name="roadmap-category" id="roadmap-category">
+                            <option value="">Select Roadmap Category...</option>
+                            <option value="roles">Roles</option>
+                            <option value="skills">Skills</option>
+                            <option value="ai">AI</option>
+                        </select>
+                    </div>
+    
+                    <div id="course-options" class="search-options" style="display: none;">
+                        <select name="course-title" id="course-title">
+                            <option value="">Select Course Title...</option>
+                            <option value="Python">Python</option>
+                            <option value="Java">Java</option>                            
+                            <option value="Vue">Vue</option>
+                            <option value="Docker">Docker</option>
+                            <option value="Angular">Angular</option>
+                            <option value="Frontend">Frontend</option>                            
+                            <option value="Backend">Backend</option>
+                            <option value="DevOps">DevOps</option>
+                            <option value="FullStuck">FullStuck</option>                            
+                            <option value="Software Architect">Software Architect</option>
+                            <option value="Introduction to AI">Introduction to AI</option>                            
+                            <option value="Maths and Statisctics for AI">Maths and Statisctics for AI</option>
+                            <option value="Machine Learning">Machine Learning</option>
+                            <option value="Deep learning">Deep learning</option>
+                            <option value="Natural Language Processing">Natural Language Processing</option>                            
+                            <option value="AI Ethics">AI Ethics</option>
+                            <option value="AI Practics and Projects">AI Practics and Projects</option>
+                            <option value="AI Resources">AI Resources</option>
+                        </select>
+                    </div>
+    
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+                <div class="browse-links">
+                    <a href="all-courses.html">Browse all courses</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="video-course">
         <div class="video-course container">
             <div class="video-course-top">
                 <h1 class="section-title">Overview of different IT careers</h1>
                 <p class="paragraph"><br>
-                    <iframe class="tutorial-video" width="800" height="450" src="https://www.youtube.com/embed/XmWkcePhf84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="tutorial-video" width="1200" height="675" src="https://www.youtube.com/embed/XmWkcePhf84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </p>
             </div>
         </div>
@@ -110,6 +200,7 @@
     <div id="footer-placeholder"></div>
     <script src="footer.js"></script>
     <script src="analytics.js"></script>
+    <script src="course.js"></script>
 </body>
 
 </html>
