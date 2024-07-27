@@ -1,5 +1,4 @@
 const aiQuestions = [
-    // Chapter 1: AI History
     { question: "What year did the term 'Artificial Intelligence' get coined?", choices: ["a. 1950", "b. 1956", "c. 1965", "d. 1972"], answer: 1 },
     { question: "Who is considered the father of Artificial Intelligence?", choices: ["a. Alan Turing", "b. John McCarthy", "c. Marvin Minsky", "d. Herbert Simon"], answer: 1 },
     { question: "Which conference is recognized as the birth of AI?", choices: ["a. Dartmouth Conference", "b. Turing Conference", "c. MIT AI Conference", "d. Stanford AI Symposium"], answer: 0 },
@@ -10,7 +9,6 @@ const aiQuestions = [
     { question: "Who introduced the Turing Test, a test of a machine's ability to exhibit intelligent behavior?", choices: ["a. John McCarthy", "b. Alan Turing", "c. Marvin Minsky", "d. Claude Shannon"], answer: 1 },
     { question: "Which field of AI involves the simulation of human thought processes in a computerized model?", choices: ["a. Machine Learning", "b. Neural Networks", "c. Cognitive Computing", "d. Natural Language Processing"], answer: 2 },
     { question: "What is the name of the AI that won the game show Jeopardy! in 2011?", choices: ["a. Watson", "b. AlphaGo", "c. Siri", "d. DeepMind"], answer: 0 },
-    // Present trends and future prospects in AI
     { question: "What is the focus of narrow AI?", choices: ["a. Performing a single task", "b. Mimicking human intelligence", "c. Self-awareness", "d. Emotional intelligence"], answer: 0 },
     { question: "Which AI technology is commonly used for voice assistants like Siri and Alexa?", choices: ["a. Neural Networks", "b. Expert Systems", "c. Natural Language Processing", "d. Genetic Algorithms"], answer: 2 },
     { question: "What is the primary goal of General AI?", choices: ["a. To excel in one specific task", "b. To surpass human intelligence in all aspects", "c. To understand and learn any intellectual task that a human can", "d. To mimic natural language processing"], answer: 2 },
@@ -21,7 +19,6 @@ const aiQuestions = [
     { question: "What is the role of AI in autonomous vehicles?", choices: ["a. Managing engine performance", "b. Controlling infotainment systems", "c. Enabling self-driving capabilities", "d. Enhancing fuel efficiency"], answer: 3 },
     { question: "Which AI technology is used for detecting patterns and anomalies in data?", choices: ["a. Neural Networks", "b. Genetic Algorithms", "c. Expert Systems", "d. Fuzzy Logic"], answer: 0 },
     { question: "What ethical concern is associated with the development of AI?", choices: ["a. AI's impact on employment", "b. AI's role in climate change", "c. AI's contribution to urban planning", "d. AI's influence on fashion trends"], answer: 0 },
-    // Chapter 2: AI Basics
     { question: "What is the definition of Artificial Intelligence?", choices: ["a. Machines with self-awareness", "b. Systems that think and act like humans", "c. Devices with superior physical strength", "d. Programs that can only perform arithmetic operations"], answer: 1 },
     { question: "Which of the following best describes Machine Learning?", choices: ["a. Hardcoding all possible scenarios", "b. Enabling machines to learn from data", "c. Pre-programming responses to stimuli", "d. Using only statistical methods for AI"], answer: 1 },
     { question: "What is the key characteristic of Narrow AI?", choices: ["a. It can perform a wide range of tasks", "b. It specializes in a specific task", "c. It possesses self-awareness", "d. It can understand and generate human language"], answer: 1 },

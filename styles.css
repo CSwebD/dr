@@ -150,7 +150,7 @@ a.active, a:hover {
 }
 #head .head .title-page {
     font-size: 3rem;
-    color: #2d9682; /* Keep the original color */
+    color: #377536; /* Keep the original color */
     font-weight: bold; /* Make the text bold */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
     background-color: rgba(255, 255, 255, 0.8); /* Lighten the background for better contrast */
