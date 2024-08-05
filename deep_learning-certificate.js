@@ -44,7 +44,7 @@ async function generateCertificate() {
         // Add course completion text
         doc.setFontSize(20);
         doc.setFont('helvetica', 'bold');
-        doc.text(`Machine Learning - Full Course for Beginners`, 148.5, 130, null, null, 'center');
+        doc.text(`Deep Learning - Full Course for Beginners`, 148.5, 130, null, null, 'center');
 
         // Add date
         doc.setFontSize(12);
