@@ -37,3 +37,6 @@ Timestamp appended successfully
 Running script at 16/08/2024 18:30:16.56 
 File exists 
 Timestamp appended successfully 
+Running script at 17/08/2024 18:30:16.62 
+File exists 
+Timestamp appended successfully 
