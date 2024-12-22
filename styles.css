@@ -94,7 +94,7 @@ label.brand-name {
     font-style: thin;
 }
 nav ul {
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto";
     display: flex;
     align-items: center;
     margin-right: 20px;
@@ -109,7 +109,7 @@ nav ul li a {
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
-    text-transform: uppercase;
+    /*text-transform: ; */
 }
 a.active, a:hover {
     background: #2c2b2b;

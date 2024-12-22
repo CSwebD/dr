@@ -51,12 +51,10 @@
     <section id="description-t">
         <div class="container">
             <div class="content">
-                <h1>Shape Your Future with Skill Maps</h1>
-                <p>Study online from anywhere - for <b>FREE</b>.
-                    <br>Technology and AI are driving the future.
-                    <br>Explore over 20 courses in Development Skills, Roles, and AI.
-                    <br><b>New!</b> Dive into our <b>Blog</b> for the latest insights and trends.
-                </p>
+                <h1>Choose Your Future with Skill Maps</h1>
+                <p>Study online from anywhere for <b>FREE</b>.
+                    <br>Technology development and AI are the future.
+                    <br>Over 20 courses on Development <i>Skills, Roles, and AI.</i></p>
             </div>
         </div>
     </section>
@@ -65,47 +63,50 @@
     <section id="sections1">
         <div class="sections container">
             <div class="search-container">
-                <h2>What topic are you interested in exploring?</h2>
+                <h2>Search for a Course or Roadmap</h2>
     
-                <div class="split-container">
-                    <!-- Left Side - Buttons and Submenus -->
-                    <div class="roadmap-buttons">
-                        <button class="toggle-btn" data-target="skills">Skill Roadmap</button>
-                        <div class="submenu" id="skills">
-                            <a href="/skills/Angular.html">Angular</a>
-                            <a href="/skills/Docker.html">Docker</a>
-                            <a href="/skills/Java.html">Java</a>
-                            <a href="/skills/Python.html">Python</a>
-                            <a href="/skills/Vue.html">Vue</a>
-                        </div>
+                <form class="search-form" id="general-search-form">
+                    <select name="search-type" id="search-type">
+                        <option value="">Select Search Type...</option>
+                        <option value="roadmap">Roadmap</option>
+                        <option value="course">Course</option>
+                        <option value="ai">AI</option>
+                    </select>
+                </form>
     
-                        <button class="toggle-btn" data-target="roles">Role Roadmap</button>
-                        <div class="submenu" id="roles">
-                            <a href="/roles/Frontend.html">Frontend</a>
-                            <a href="/roles/Backend.html">Backend</a>
-                            <a href="/roles/FullStack.html">FullStack</a>
-                            <a href="/roles/DevOps.html">DevOps</a>
-                            <a href="/roles/Software_Architect.html">Software Architect</a>
-                        </div>
+                <!-- Roadmap Search -->
+                <form class="search-form" id="roadmap-search-form" style="display: none;">
+                    <select name="roadmap-category" id="roadmap-category">
+                        <option value="">Select Roadmap Category...</option>
+                        <option value="roles">Roles</option>
+                        <option value="skills">Skills</option>
+                        <option value="ai">AI</option>
+                    </select>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
     
-                        <button class="toggle-btn" data-target="ai">AI Roadmap</button>
-                        <div class="submenu" id="ai">
-                            <a href="/AI/Introduction_to_AI.html">Introduction to AI</a>
-                            <a href="/AI/maths_and_statistics_for_ai.html">Maths and Statistics for AI</a>
-                            <a href="/AI/machine_learning.html">Machine Learning</a>
-                            <a href="/AI/deep_learning.html">Deep Learning</a>
-                            <a href="/AI/natural_language_processing.html">Natural Language Processing</a>
-                            <a href="/AI/ai_ethics.html">AI ethics</a>
-                            <a href="/AI/practics_and_projects.html">(AI) Practics and Projects</a>
-                        </div>
+                <!-- Course Search -->
+                <form class="search-form" id="course-search-form" style="display: none;">
+                    <select name="course-title" id="course-title">
+                        <option value="">Select Course Title...</option>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Vue">Vue</option>
+                        <option value="Docker">Docker</option>
+                    </select>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
     
-                        <button class="toggle-btn" data-target="blog">Blog</button>
-                        <div class="submenu" id="blog">
-                            <a href="ai_trends.html">AI Trends</a>
-                            <a href="tech_blog.html">... all Articles</a>
-                        </div>
-                    </div>
-                </div>
+                <!-- AI Search -->
+                <form class="search-form" id="ai-search-form" style="display: none;">
+                    <select name="ai-topic" id="ai-topic">
+                        <option value="">Select AI Topic...</option>
+                        <option value="machine-learning">Machine Learning</option>
+                        <option value="deep-learning">Deep Learning</option>
+                        <option value="nlp">Natural Language Processing</option>
+                    </select>
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
     
                 <div class="browse-links">
                     <a href="browse_all_courses.html">Browse all courses</a>
@@ -113,43 +114,6 @@
             </div>
         </div>
     </section>
-    
-    
-    
-    
-    
-    
-    <!-- CSS (Add to your stylesheet) -->
-    <style>
-        .submenu {
-            display: none;
-            margin-top: 10px;
-        }
-        .submenu a {
-            display: block;
-            margin: 5px 0;
-            text-decoration: none;
-            color: #007BFF;
-            padding-left: 15px;
-        }
-        .submenu a:hover {
-            text-decoration: underline;
-        }
-        .toggle-btn {
-            margin: 10px 0;
-            display: block;
-            background-color: #f1f1f1;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 16px;
-            text-align: left;
-        }
-        .toggle-btn:hover {
-            background-color: #ddd;
-        }
-    </style>
-    
     
     
     <!-- Description -->
