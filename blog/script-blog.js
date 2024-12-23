@@ -21,11 +21,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 articleCard.innerHTML = `
                     <div class="featured-image">
+                    
                         <img src="${article.image}" alt="${article.title}">
                         <div class="overlay">
                             <h3><a href="${article.url}">${article.title}</a></h3>
                             <p>${article.description}</p>
-                            <small class="article-date">${relativeDate}</small>
+                            <small class="article-date1">${relativeDate}</small>
                         </div>
                     </div>
                 `;
@@ -40,11 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 const relativeDate = getRelativeTime(article.date);
 
                 articleCard.innerHTML = `
-                    <img src="${article.image}" alt="${article.title}">
                     <div class="article-content">
                         <h3><a href="${article.url}">${article.title}</a></h3>
                         <p>${article.description}</p>
-                        <small class="article-date">${relativeDate}</small>
+                        <small class="article-date2">${relativeDate}</small>
                     </div>
                 `;
                 articleGrid.appendChild(articleCard);
@@ -72,27 +72,20 @@ document.addEventListener('DOMContentLoaded', function () {
             articleGrid.innerHTML = `<p>Failed to load articles. Please try again later.</p>`;
         });
 
-    // Calculate relative time (e.g., "2 days ago")
+    // Calculate relative time or display formatted date
     function getRelativeTime(dateString) {
         const articleDate = new Date(dateString);
         const now = new Date();
         const diffInSeconds = Math.floor((now - articleDate) / 1000);
+        const diffInDays = Math.floor(diffInSeconds / 86400);
 
-        const intervals = {
-            year: 31536000,
-            month: 2592000,
-            week: 604800,
-            day: 86400,
-            hour: 3600,
-            minute: 60
-        };
-
-        for (const [key, value] of Object.entries(intervals)) {
-            const interval = Math.floor(diffInSeconds / value);
-            if (interval >= 1) {
-                return `${interval} ${key}${interval > 1 ? 's' : ''} ago`;
-            }
+        if (diffInDays < 7) {
+            // Show "x days ago" if less than 7 days
+            return diffInDays === 0 ? 'Today' : `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
+        } else {
+            // Format the date for articles older than 7 days
+            const options = { day: '2-digit', month: 'short', year: 'numeric' };
+            return articleDate.toLocaleDateString('en-GB', options);
         }
-        return 'Just now';
     }
 });

@@ -1,15 +1,15 @@
 [
     {
         "title": "Master Python Development",
-        "url": "blog/python-guide.html",
-        "image": "/blog/articles/python.jpg",
+        "url": "/blog/0002.html",
+        "image": "/blog/images/0002.jpg",
         "description": "Learn Python through hands-on projects and tutorials.",
         "date": "2024-02-18T10:30:00Z"
     },
     {
         "title": "AI Roadmap for Beginners",
-        "url": "blog/ai-roadmap.html",
-        "image": "/blog/articles/ai.jpg",
+        "url": "/blog/0001.html",
+        "image": "/blog/images/0001.jpg",
         "description": "Start your journey into AI and machine learning.",
         "date": "2024-02-10T14:45:00Z"
     },
