@@ -1,26 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.querySelectorAll('.toggle-btn');
     const submenus = document.querySelectorAll('.submenu');
+    const isMobile = () => window.innerWidth <= 768;
 
     buttons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const target = this.getAttribute('data-target');
             const submenu = document.getElementById(target);
 
-            // Toggle submenu directly below button (for desktop & mobile)
-            if (submenu.style.display === 'block') {
-                submenu.style.display = 'none';
-            } else {
-                submenus.forEach(sub => sub.style.display = 'none');
+            // Check if the submenu is already open
+            const isOpen = submenu.style.display === 'block';
+
+            // Hide all submenus first
+            submenus.forEach(sub => {
+                sub.style.display = 'none';
+                if (isMobile()) {
+                    sub.parentElement.appendChild(sub); // Reset submenu to original container
+                }
+            });
+
+            // Toggle submenu for the clicked button
+            if (!isOpen) {
                 submenu.style.display = 'block';
+
+                // On mobile, move submenu directly below the clicked button
+                if (isMobile()) {
+                    button.insertAdjacentElement('afterend', submenu);
+                }
             }
         });
-    });
-
-    // Ensure submenu stays visible after window resize (for desktop)
-    window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            submenus.forEach(sub => sub.style.display = 'none');
-        }
     });
 });
