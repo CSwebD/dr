@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Grab references to the DOM elements
     const firstRow = document.getElementById('first-row');
     const subsequentRows = document.getElementById('subsequent-rows');
 
+    // Fetch articles.json
     fetch('/blog/articles.json')
         .then(response => {
             if (!response.ok) {
@@ -13,16 +15,17 @@ document.addEventListener('DOMContentLoaded', function () {
             // Sort articles by date (newest first)
             articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-            // 1) Handle the first 2 articles
+            // 1) Handle the first 2 articles (with images)
             const firstTwo = articles.slice(0, 2);
             firstTwo.forEach(article => {
+                // Create an article card
                 const articleCard = document.createElement('div');
                 articleCard.classList.add('article-card');
 
-                // Generate relative or formatted date
+                // Calculate relative date
                 const relativeDate = getRelativeTime(article.date);
 
-                // Build card
+                // Include an image for the first two articles
                 articleCard.innerHTML = `
                     <div class="article-content">
                         <img src="${article.image}" alt="${article.title}" class="article-image">
@@ -31,25 +34,29 @@ document.addEventListener('DOMContentLoaded', function () {
                         <small class="article-date">${relativeDate}</small>
                     </div>
                 `;
+
+                // Append to the first row
                 firstRow.appendChild(articleCard);
             });
 
-            // 2) Remaining articles, grouped by 3
+            // 2) Remaining articles (no images), grouped by 3
             const remainingArticles = articles.slice(2);
-
             for (let i = 0; i < remainingArticles.length; i += 3) {
                 // Create a new row
                 const rowDiv = document.createElement('div');
                 rowDiv.classList.add('row');
 
-                // For each group of 3
+                // Take a chunk of 3 articles
                 const chunk = remainingArticles.slice(i, i + 3);
                 chunk.forEach(article => {
+                    // Create an article card
                     const articleCard = document.createElement('div');
                     articleCard.classList.add('article-card');
 
+                    // Calculate relative date
                     const relativeDate = getRelativeTime(article.date);
 
+                    // No image for these articles
                     articleCard.innerHTML = `
                         <div class="article-content">
                             <h3><a href="${article.url}">${article.title}</a></h3>
@@ -57,10 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
                             <small class="article-date">${relativeDate}</small>
                         </div>
                     `;
+
+                    // Append to the row
                     rowDiv.appendChild(articleCard);
                 });
 
-                // Append each row to subsequentRows
+                // Append each row to the subsequent rows container
                 subsequentRows.appendChild(rowDiv);
             }
         })
@@ -69,7 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
             firstRow.innerHTML = `<p>Failed to load articles. Please try again later.</p>`;
         });
 
-    // Helper function to return a relative date string or a formatted date
+    /**
+     * Returns a relative or formatted date string.
+     * - If fewer than 7 days, show 'X days ago' (or 'Today').
+     * - Otherwise, show 'DD MMM YYYY'.
+     */
     function getRelativeTime(dateString) {
         const articleDate = new Date(dateString);
         const now = new Date();
@@ -77,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
         const diffInDays = Math.floor(diffInSeconds / 86400);
 
         if (diffInDays < 7) {
-            // Show 'x days ago' if less than 7 days
-            return diffInDays === 0 ? 'Today' : `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
+            return diffInDays === 0
+                ? 'Today'
+                : `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
         } else {
-            // Format the date for articles older than 7 days
             const options = { day: '2-digit', month: 'short', year: 'numeric' };
             return articleDate.toLocaleDateString('en-GB', options);
         }
