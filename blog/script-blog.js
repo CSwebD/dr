@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     articleCard.innerHTML = `
                         <div class="article-content">
-                            <img src="${article.image}" alt="${article.title}" class="article-image">
-                            <img src="${article.image}" alt="${article.title}">
                             <h3><a href="${article.url}">${article.title}</a></h3>
                             <p>${article.description}</p>
                             <small class="article-date">${relativeDate}</small>
