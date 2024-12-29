@@ -54,12 +54,5 @@
         "image": "/blog/articles/ml.jpg",
         "description": "An intro to machine learning concepts.",
         "date": "2020-12-22T11:20:00Z"
-    },
-    {
-        "title": "Cybersecurity Basics",
-        "url": "blog/cybersecurity.html",
-        "image": "/blog/articles/cyber.jpg",
-        "description": "Learn cybersecurity essentials for 2024.",
-        "date": "2020-12-05T07:00:00Z"
     }
 ]
