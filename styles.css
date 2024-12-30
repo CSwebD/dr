@@ -303,6 +303,13 @@ a.active, a:hover {
     font-size: 1rem;
 
 }
+/* For all anchor tags on hover/focus */
+a:hover,
+a:focus {
+  color: #fff;
+  background-color: #000; /* or whichever background color is used */
+}
+
 
 /* Top 10 Questions */
 #top10 .container {
@@ -338,7 +345,7 @@ a.active, a:hover {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1rem;
 }
-
+ 
 /* New courses */
 #why-rd .container{
     min-height: 20vh;
