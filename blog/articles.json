@@ -1,6 +1,13 @@
 [
     {
         "title": "Master Python Development",
+        "url": "/blog/0003.html",
+        "image": "/blog/images/0003-a.png",
+        "description": "Learn Python through hands-on projects and tutorials.",
+        "date": "2025-01-12T10:30:00Z"
+    },
+    {
+        "title": "Master Python Development",
         "url": "/blog/0002.html",
         "image": "/blog/images/0002.jpg",
         "description": "Learn Python through hands-on projects and tutorials.",
