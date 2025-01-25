@@ -104,7 +104,8 @@ body {
 
 .article-content h3 a:hover {
     text-decoration: underline;
-    color: white;
+    color: var(--background-color);
+    background-color: var(--text-color);
 }
 
 .article-content p {
