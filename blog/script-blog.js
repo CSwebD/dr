@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 firstRow.appendChild(articleCard);
             });
 
-            // 2) Remaining articles (no images), grouped by 3
+            // 2) Remaining articles (all with images), grouped by 3
             const remainingArticles = articles.slice(2);
             for (let i = 0; i < remainingArticles.length; i += 3) {
                 // Create a new row
@@ -56,9 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Calculate relative date
                     const relativeDate = getRelativeTime(article.date);
 
-                    // No image for these articles
+                    // Include an image for all articles
                     articleCard.innerHTML = `
                         <div class="article-content">
+                            <img src="${article.image}" alt="${article.title}" class="article-image">
                             <h3><a href="${article.url}">${article.title}</a></h3>
                             <p>${article.description}</p>
                             <small class="article-date">${relativeDate}</small>
