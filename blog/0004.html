@@ -30,12 +30,24 @@
     <div id="panel-bar-placeholder"></div>
     <script src="/panel-bar.js"></script>
 
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <button onclick="history.back()" class="back-button">
-            <i class="fas fa-arrow-left"></i> Back
-        </button>
-    </div>
+<!-- Back Button -->
+<div class="back-button-container">
+    <button onclick="goBackOrRedirect()" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+</div>
+
+<script>
+    function goBackOrRedirect() {
+        if (window.history.length > 1) {
+            history.back(); // Go to the previous page if it exists
+        } else {
+            window.location.href = 'https://skill-maps.com/blog.html'; // Redirect to the blog section
+        }
+    }
+</script>
+
+
 
     <!-- Article Header Section -->
     <section id="description-t">
